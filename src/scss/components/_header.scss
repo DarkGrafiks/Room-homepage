@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: $spacer $spacer*1.5;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.logo {
+  width: auto;
+  margin-right: $gutter;  
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    display: flex;
+    padding: $spacer*.35 $spacer/4;
+  }
+}

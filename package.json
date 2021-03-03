@@ -1,0 +1,17 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/scss/style.scss:./dist/style.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

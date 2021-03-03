@@ -1,0 +1,106 @@
+$menu-color: $color-white;
+
+@keyframes menuLinksFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  display: flex;
+
+  &_item {
+    position: relative;
+    display: block;
+    padding: $spacer/3;
+    color: $menu-color;
+    text-decoration: none;
+    text-transform: lowercase;
+    text-shadow: 1px 1px 1px $color-black;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 30%;
+      background-color: $menu-color;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-100%);
+      margin-top: .5rem;
+      transition: opacity .25s ease-in, transform .25s ease-in;
+    }
+
+    &--current:after,
+    &:hover:after,
+    &:focus:after {
+      opacity: 1;
+      transform: translateX(-50%);
+    }
+  }
+}
+.burger {
+  display: none;
+  background: url(../../../dist/media/icons/icon-hamburger.svg) no-repeat center center;
+}
+.icon-menu--close {
+  display: none;
+  background: url(../../../dist/media/icons/icon-close.svg) no-repeat center center;
+}
+
+@media screen and (max-width: 375px) {
+  .menu {
+    padding: $spacer/2 0;
+    justify-content: flex-end;
+    font-weight: 700;
+
+    &_item {
+      color: $color-black;
+      opacity: 0;
+      text-shadow: none;
+
+      &:after {display: none;}
+    }
+  }
+  .logo {
+    display: inline-block;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+  }
+  .burger,
+  .icon-menu--close {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .icon-menu--close {
+    display: block;
+  }
+  .main_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 $spacer/4;   
+    background: $color-white; 
+    transform: translateY(-100%);
+    transition: transform .25s ease-in;
+    
+    &--active {
+      background: $color-white; 
+      transform: translateY(0);
+      transition: transform .25s ease;
+      
+    }
+  }
+}

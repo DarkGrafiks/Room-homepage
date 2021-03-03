@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: $font-size-base;
+  font-family: $font-family;
+}
+img {
+  width: 100%;
+}
+.header,
+.wrapper,
+.footer_inner {
+  max-width: $site-max-width;
+  margin: 0 auto;
+}

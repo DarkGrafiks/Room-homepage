@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/dist/media/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/style.css">
   <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <header class="header">
-    <div class="logo">room</div>
-    <nav class="menu">
-      <ul>
-        <li><a class="menu_item" href="#" title="Go to Home page">Home</a></li>
+    <div class="burger"></div>
+    <img class="logo" src="/dist/media/icons/logo.svg" alt="Room logo" />
+    <nav class="main_nav">
+      <div class="icon icon-menu--close"></div>
+      <ul class="menu">
+        <li><a class="menu_item menu_item--current" href="#" title="Go to Home page">Home</a></li>
         <li><a class="menu_item" href="#" title="Go to Shop page">Shop</a></li>
         <li><a class="menu_item" href="#" title="Go to About page">About</a></li>
         <li><a class="menu_item" href="#" title="Go to Contact page">Contact</a></li>
@@ -35,75 +32,87 @@
     -->
     <section class="slider row cols_2">
 
-      <div class="slider_container">
+      <!-- SLIDE 1 -->
+      <div class="slide">
+        <div class="slide_img">
 
-        <!-- SLIDE 1 -->
-        <div class="slide">
-          <div class="slide_img">
-            <img src="http://placehold.it/" alt="">
-          </div>
-          <div class="slide_container_inner">
-            <h1 class="slide_title">Discover innovative ways to decorate</h1>
-            <div class="slide_content">
-              <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
-              <a href="#" title="Shop now">Shop now</a>
-            </div>
-          </div>
+          <picture>
+            <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-1.jpg">
+            <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-1.jpg">
+            <img src="/dist/media/img/slider/mobile-image-hero-1.jpg" alt="">
+          </picture>
+          
         </div>
-
-        <!-- SLIDE 2 -->
-        <div class="slide">
-          <div class="slide_img">
-            <img src="http://placehold.it/" alt="">
-          </div>
-          <div class="slide_container_inner">
-            <h1 class="slide_title">We are available all across the globe</h1>
-            <div class="slide_content">
-              <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.</p>
-              <a href="#" title="Shop now">Shop now</a>
-            </div>
-          </div>
+        <div class="slide_content bloc-text">
+          <h2 class="slide_title">Discover innovative ways to decorate</h2>
+          <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+          <a href="#" class="shop_link" title="Shop now">Shop now</a>
         </div>
-
-        <!-- SLIDE 3 -->
-        <div class="slide">
-          <div class="slide_img">
-            <img src="http://placehold.it/" alt="">
-          </div>
-          <div class="slide_container_inner">
-            <h1 class="slide_title">Manufactured with the best materials</h1>
-            <div class="slide_content">
-              <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.</p>
-              <a href="#" title="Shop now">Shop now</a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <div class="slide_img">
+
+          <picture>
+            <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-2.jpg">
+            <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-2.jpg">
+            <img src="/dist/media/img/slider/mobile-image-hero-2.jpg" alt="">
+          </picture>
+
+        </div>
+        <div class="slide_content bloc-text">
+          <h2 class="slide_title">We are available all across the globe</h2>
+          <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.</p>
+          <a href="#" class="shop_link" title="Shop now">Shop now</a>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="slide_img">
+          <picture>
+            <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-3.jpg">
+            <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-3.jpg">
+            <img src="/dist/media/img/slider/mobile-image-hero-3.jpg" alt="">
+          </picture>
+        </div>
+        <div class="slide_content bloc-text">
+          <h2 class="slide_title">Manufactured with the best materials</h2>
+          <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.</p>
+          <a href="#" class="shop_link" title="Shop now">Shop now</a>
+        </div>
+      </div>
+      <nav class="slider_nav">
+        <a class="slidePrev prev"></a>
+        <a class="slideNext next"></a>      
+      </nav>
     </section>
     <!--/
       END SLIDER
     -->
 
     <section class="row cols_3">
-      <div>
-        <img src="" alt="">
+      <div class="cols_3-1">
+        <img src="/dist/media/img/image-about-dark.jpg" alt="">
       </div>
-      <div>
+      <div class="cols_3-1 bloc-text">
         <h3 class="h3">About our furniture</h3>
         <p>Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
       </div>
-      <div>
-        <img src="" alt="">
+      <div class="cols_3-1">
+        <img src="/dist/media/img/image-about-light.jpg" alt="">
       </div>
     </section>
   </main>
   
   <footer class="footer">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Alexandre Riquet</a>.
-  </p>
+    <div class="footer_inner">
+      <p>Challenge by <a class="link link-light" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="link link-light" href="https://github.com/DarkGrafiks">Alexandre Riquet</a>.
+    </p>
+    </div>
   </footer>
 
+  <script src="src/js/scripts.js"></script>
 </body>
 </html>

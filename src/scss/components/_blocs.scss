@@ -1,0 +1,13 @@
+.bloc-text {
+  padding: $spacer*1.5;
+  color: $color-gray;
+  line-height: 1.7;
+  letter-spacing: 0;
+  
+  @media screen and (max-width: 980px) {
+    padding: $spacer;
+  }
+  @media screen and (max-width: 920px) {
+    padding: $spacer $spacer/1.5;  
+  }
+}

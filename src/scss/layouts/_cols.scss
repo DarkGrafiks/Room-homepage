@@ -1,0 +1,25 @@
+.cols_3 {
+  display: flex;
+
+  &-1 {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+
+      @media screen and (max-width: 920px) {
+        width: 100%;
+        height: auto;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .cols_3 {
+    flex-direction: column;
+  }
+}

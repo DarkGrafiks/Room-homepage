@@ -1,0 +1,18 @@
+$breakpoints: (
+  "mobile": 375px,
+  "desktop": 1440px,
+);
+
+$site-max-width: 1440px;
+
+$color-black: hsl(0, 0%, 0%);
+$color-dark-gray: hsl(0, 0%, 27%);
+$color-gray: hsl(0, 0%, 63%);
+$color-white: hsl(0, 0%, 100%);
+
+$font-family: 'Spartan', sans-serif;
+$font-weights: (500,600,700);
+$font-size-base: 12px;
+
+$spacer: 4em;
+$gutter: 3rem;
