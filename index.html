@@ -11,10 +11,10 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="burger"></div>
     <img class="logo" src="/dist/media/icons/logo.svg" alt="Room logo" />
-    <nav class="main_nav">
+    <nav class="main_nav" role="navigation">
       <div class="icon icon-menu--close"></div>
       <ul class="menu">
         <li><a class="menu_item menu_item--current" href="#" title="Go to Home page">Home</a></li>
@@ -25,21 +25,17 @@
     </nav>
   </header>
 
-  <main class="wrapper">
+  <main class="wrapper" role="main">
 
-    <!-- 
-      SLIDER
-    -->
     <section class="slider row cols_2">
 
-      <!-- SLIDE 1 -->
       <div class="slide">
         <div class="slide_img">
 
           <picture>
             <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-1.jpg">
             <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-1.jpg">
-            <img src="/dist/media/img/slider/mobile-image-hero-1.jpg" alt="">
+            <img src="/dist/media/img/slider/mobile-image-hero-1.jpg" alt="Chairs">
           </picture>
           
         </div>
@@ -50,14 +46,13 @@
         </div>
       </div>
 
-      <!-- SLIDE 2 -->
       <div class="slide">
         <div class="slide_img">
 
           <picture>
             <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-2.jpg">
             <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-2.jpg">
-            <img src="/dist/media/img/slider/mobile-image-hero-2.jpg" alt="">
+            <img src="/dist/media/img/slider/mobile-image-hero-2.jpg" alt="Chairs">
           </picture>
 
         </div>
@@ -68,13 +63,12 @@
         </div>
       </div>
 
-      <!-- SLIDE 3 -->
       <div class="slide">
         <div class="slide_img">
           <picture>
             <source media="(max-width: 375px)" srcset="/dist/media/img/slider/mobile-image-hero-3.jpg">
             <source media="(min-width: 376px)" srcset="/dist/media/img/slider/desktop-image-hero-3.jpg">
-            <img src="/dist/media/img/slider/mobile-image-hero-3.jpg" alt="">
+            <img src="/dist/media/img/slider/mobile-image-hero-3.jpg" alt="Chairs">
           </picture>
         </div>
         <div class="slide_content bloc-text">
@@ -83,36 +77,33 @@
           <a href="#" class="shop_link" title="Shop now">Shop now</a>
         </div>
       </div>
-      <nav class="slider_nav">
+      <nav class="slider_nav" role="navigation">
         <a class="slidePrev prev"></a>
         <a class="slideNext next"></a>      
       </nav>
     </section>
-    <!--/
-      END SLIDER
-    -->
 
     <section class="row cols_3">
       <div class="cols_3-1">
-        <img src="/dist/media/img/image-about-dark.jpg" alt="">
+        <img src="/dist/media/img/image-about-dark.jpg" alt="Dark design chair and table">
       </div>
       <div class="cols_3-1 bloc-text">
         <h3 class="h3">About our furniture</h3>
         <p>Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
       </div>
       <div class="cols_3-1">
-        <img src="/dist/media/img/image-about-light.jpg" alt="">
+        <img src="/dist/media/img/image-about-light.jpg" alt="White design chair">
       </div>
     </section>
   </main>
   
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer_inner">
-      <p>Challenge by <a class="link link-light" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="link link-light" href="https://github.com/DarkGrafiks">Alexandre Riquet</a>.
+      <p>Challenge by <a class="link link-light" title="Go to frontendmentor.io" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="link link-light" title="Go to Alexandre Riquet GitHub page" href="https://github.com/DarkGrafiks">Alexandre Riquet</a>.
     </p>
     </div>
   </footer>
 
-  <script src="src/js/scripts.js"></script>
+  <script src="src/js/scripts.js" defer></script>
 </body>
 </html>
