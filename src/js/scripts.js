@@ -24,14 +24,9 @@ const slider = () => {
   const plusSlides = (n) => {
     showSlides(slideIndex += n);
   }
-
-  const currentSlide = (n) => {
-    showSlides(slideIndex = n);
-  }
   
   prevBtn.addEventListener('click', () => plusSlides(-1));
   nextBtn.addEventListener('click', () => plusSlides(1));
-
 
 }
 

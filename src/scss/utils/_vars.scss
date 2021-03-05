@@ -1,9 +1,23 @@
-$breakpoints: (
+$OLDbreakpoints: (
   "mobile": 375px,
   "desktop": 1440px,
 );
+// 375 ; 920 ; 980 ; 1414 ; 1280
+
+$breakpoints: (
+  sm: 375px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1440px,
+);
+
+$small: map-get($breakpoints, sm) !default;
+$medium: map-get($breakpoints, md) !default;
+$large: map-get($breakpoints, lg) !default;
+$extra-large: map-get($breakpoints, xl) !default;
 
 $site-max-width: 1440px;
+$grid-columns: 12;
 
 $color-black: hsl(0, 0%, 0%);
 $color-dark-gray: hsl(0, 0%, 27%);

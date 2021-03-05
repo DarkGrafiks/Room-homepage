@@ -1,8 +1,10 @@
+@use '../utils/vars' as v;
+
 .shop_link {
   display: inline-block;
-  margin: $gutter/3 0;
-  padding: $spacer/2.5  $spacer  $spacer/2.5 0;
-  color: $color-black;
+  margin: v.$gutter/3 0;
+  padding: v.$spacer/2.5  v.$spacer  v.$spacer/2.5 0;
+  color: v.$color-black;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .75rem;
@@ -19,7 +21,7 @@
 
 .link {
   &-light {
-    color: $color-white;
+    color: v.$color-white;
   }
 
   &:hover,

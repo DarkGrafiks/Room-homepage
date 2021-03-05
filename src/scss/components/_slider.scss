@@ -1,10 +1,23 @@
+@use '../utils/vars' as v;
+@use '../utils/mixins' as *;
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
 .slider {
   position: relative;
   height: 534px;
   margin: auto;
   overflow: hidden;
 
-  @media screen and (max-width: 920px) {
+  @include respond-to(medium) {
     height: auto;
   }
 
@@ -13,21 +26,21 @@
     position: absolute;
     bottom: 0;
     right: 40%;
-    background: $color-black;
+    background: v.$color-black;
     transform: translateX(100%);
     
-    @media screen and (max-width: 1280px) {
+    @include respond-to(large) {
       right: 50%;
     }
 
-    @media screen and (max-width: 920px) {
+    @include respond-to(medium) {
       bottom: initial;
       top: 534px;
       right: 0;
       transform: translate(0,-100%);
     }
 
-    @media screen and (max-width: 375px) {
+    @include respond-to(small) {
       bottom: initial;
       top: 360px;
       right: 0;
@@ -44,41 +57,30 @@
     transition: 0.6s ease;
     user-select: none;
 
-    @media screen and (max-width: 920px) {
+    @include respond-to(medium) {
       width: 50px;
       height: 50px;
     }    
   }
   
-.next {
-  background: url(../../../dist/media/icons/icon-angle-right.svg) no-repeat center center;
-}
-.prev {
-  background: url(../../../dist/media/icons/icon-angle-left.svg) no-repeat center center;
-}
+  .next {
+    background: url(../../../dist/media/icons/icon-angle-right.svg) no-repeat center center;
+  }
+  .prev {
+    background: url(../../../dist/media/icons/icon-angle-left.svg) no-repeat center center;
+  }
 
-.prev:hover,
-.next:hover {
-  background-color: $color-dark-gray;
-}
+  .prev:hover,
+  .next:hover {
+    background-color: v.$color-dark-gray;
+  }
 
-.slide {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
+  .slide {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 }
 
 .slide {
@@ -88,11 +90,11 @@
     width: 60%;
     overflow: hidden;
 
-    @media screen and (max-width: 1280px) {
+    @include respond-to(large) {
       width: 50%;
     }
 
-    @media screen and (max-width: 1414px) {
+    @include respond-to(extra-large) {
       img {
         width:auto;
         height: 100%;
@@ -101,38 +103,35 @@
   }
   &_content {
     width: 40%;
-    padding-top: $spacer*2;
+    padding-top: v.$spacer*2;
 
-    @media screen and (max-width: 1280px) {
+    @include respond-to(large) {
       width: 50%;
     }
 
-    @media screen and (max-width: 920px) {
-      padding: $spacer*1.5 $spacer/1.5;
+    @include respond-to(medium) {
+      padding: v.$spacer*1.5 v.$spacer/1.5;
     }    
   }
 
   &_title {
-    margin-bottom: $gutter*.65;
+    margin-bottom: v.$gutter*.65;
     font-size: 2.45rem;
     font-weight: 700;
     line-height: 1.15;
-    color: $color-black;
+    color: v.$color-black;
     
-    @media screen and (max-width: 920px) {
+    @include respond-to(medium) {
       font-size: 1.75rem;
     }
   }
-}
 
-@media screen and (max-width: 920px) {
-  .slide {
+  @include respond-to(medium) {
     flex-direction: column;
 
     &_img,
     &_content {
       width: 100%;
-    }
-  
+    }    
   }
 }

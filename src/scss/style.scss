@@ -1,14 +1,14 @@
-@import 'utils/vars';
+@use 'utils/vars';
 
-@import 'base/reset';
-@import 'base/typo';
+@use 'base/reset';
+@use 'base/typo';
 
-@import 'layouts/globals';
-@import 'layouts/cols';
+@use 'layouts/globals';
+@use 'layouts/cols';
 
-@import 'components/header';
-@import 'components/menu';
-@import 'components/blocs';
-@import 'components/slider';
-@import 'components/buttons';
-@import 'components/footer';
+@use 'components/header';
+@use 'components/menu';
+@use 'components/blocs';
+@use 'components/slider';
+@use 'components/buttons';
+@use 'components/footer';

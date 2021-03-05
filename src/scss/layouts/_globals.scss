@@ -1,16 +1,13 @@
-* {
-  box-sizing: border-box;
-}
+@use '../utils/vars' as v;
+
 body {
-  font-size: $font-size-base;
-  font-family: $font-family;
+  font-size: v.$font-size-base;
+  font-family: v.$font-family;
 }
-img {
-  width: 100%;
-}
+
 .header,
 .wrapper,
 .footer_inner {
-  max-width: $site-max-width;
+  max-width: v.$site-max-width;
   margin: 0 auto;
 }

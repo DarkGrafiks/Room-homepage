@@ -1,5 +1,7 @@
+@use '../utils/vars' as v;
+
 .cols_3 {
-  display: flex;
+  display: flex;  
 
   &-1 {
     flex: 1;

@@ -1,3 +1,6 @@
+@use '../utils/vars' as v;
+@use '../utils/mixins' as *;
+
 .header {
   position: fixed;
   left: 50%;
@@ -5,18 +8,24 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: $spacer $spacer*1.5;
+  padding: v.$spacer v.$spacer*1.5;
   transform: translateX(-50%);
   z-index: 100;
-}
-.logo {
-  width: auto;
-  margin-right: $gutter;  
-}
 
-@media screen and (max-width: 375px) {
-  .header {
-    display: flex;
-    padding: $spacer*.35 $spacer/4;
+  @include respond-to(small) {
+    padding: v.$spacer*.35 v.$spacer/4;
   }
 }
+
+.logo {
+  width: auto;
+  margin-right: v.$gutter;
+
+  @include respond-to(small) {
+    display: inline-block;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+  }
+}
+

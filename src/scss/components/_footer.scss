@@ -1,7 +1,9 @@
+@use '../utils/vars' as v;
+
 .footer {
-  padding: $spacer $spacer/2;
-  background-color: $color-black;
-  color: $color-gray;
+  padding: v.$spacer v.$spacer/2;
+  background-color: v.$color-black;
+  color: v.$color-gray;
   text-align: center;
   line-height: 1.5rem;
 }
