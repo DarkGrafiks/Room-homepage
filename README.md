@@ -8,3 +8,9 @@ Voici le lien vers ma proposition d'intégration responsive :
 Voici la maquette et le lien vers le [challenge](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) : 
 
 ![](./desktop-design-slide-1.jpg)
+
+## Stack
+
+- HTML
+- Sass
+- JS
